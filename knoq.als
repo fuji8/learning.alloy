@@ -13,9 +13,7 @@ sig Room {
 
 sig Tag {}
 
-pred at_least_one_event {
-    some Event
-}
+
 
 sig Event {
     , admins: some User
@@ -25,6 +23,8 @@ sig Event {
     , allowTogether: Bool
 }
 
+pred at_least_one_event {
+    some Event
+}
 
-
-run {}
+run at_least_one_event
